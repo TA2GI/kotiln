@@ -74,11 +74,11 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/main_list"
+        android:id="@+id/mai_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:paddingHorizontal="10dp"
         android:paddingVertical="5dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,12 +89,14 @@
         android:id="@+id/main_write"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <EditText
+            android:id="@+id/mai_todo_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -103,12 +105,12 @@
             android:textSize="15dp"
             android:textStyle="normal"
             android:inputType="text"
+            android:maxLines="1"
             android:background="@null"
-            android:paddingHorizontal="10dp"
-            android:paddingVertical="5dp"
             android:layout_gravity="center"/>
 
         <ImageView
+            android:id="@+id/mai_add_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/icon_add"
