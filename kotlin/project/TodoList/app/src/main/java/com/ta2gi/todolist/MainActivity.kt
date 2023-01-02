@@ -1,6 +1,7 @@
 package com.ta2gi.todolist
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     val todoList = mutableListOf<TodoEntity>()
 
     // adapter 선언
-    val mainAdapter = MainAdapter(todoList)
+    val mainAdapter = MainAdapter(this, todoList)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,10 +69,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
-}
 
-// 키보드 내리기
-fun hideKeyboard(act: Activity){
-    val imm = act.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-    imm.hideSoftInputFromWindow(act.currentFocus?.windowToken, 0)
+    // 키보드 내리기
+    fun hideKeyboard(act : Activity){
+        val imm = act.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(act.currentFocus?.windowToken, 0)
+    }
+
+    // 다이얼로그
+    fun todoDialog(todo : String) {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("할 일")
+        builder.setMessage("$todo")
+        builder.show()
+    }
 }

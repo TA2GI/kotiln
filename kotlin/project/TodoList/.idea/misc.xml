@@ -3,9 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/jang/Desktop/TA2GI/kotlin/project/TodoList/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1655" />
         <entry key="..\:/Users/jang/Desktop/TA2GI/kotlin/project/TodoList/app/src/main/res/drawable/custom_checkbox.xml" value="0.1655" />
         <entry key="..\:/Users/jang/Desktop/TA2GI/kotlin/project/TodoList/app/src/main/res/drawable/icon_add.xml" value="0.14" />
+        <entry key="..\:/Users/jang/Desktop/TA2GI/kotlin/project/TodoList/app/src/main/res/drawable/icon_check_off.xml" value="0.1655" />
+        <entry key="..\:/Users/jang/Desktop/TA2GI/kotlin/project/TodoList/app/src/main/res/drawable/icon_check_on.xml" value="0.1655" />
+        <entry key="..\:/Users/jang/Desktop/TA2GI/kotlin/project/TodoList/app/src/main/res/drawable/icon_delete.xml" value="0.1655" />
+        <entry key="..\:/Users/jang/Desktop/TA2GI/kotlin/project/TodoList/app/src/main/res/drawable/round_background.xml" value="0.1655" />
         <entry key="..\:/Users/jang/Desktop/TA2GI/kotlin/project/TodoList/app/src/main/res/layout/activity_main.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/jang/Desktop/TA2GI/kotlin/project/TodoList/app/src/main/res/layout/custom_dialog.xml" value="0.20346137610806247" />
         <entry key="..\:/Users/jang/Desktop/TA2GI/kotlin/project/TodoList/app/src/main/res/layout/list_item.xml" value="0.25104166666666666" />
       </map>
     </option>
