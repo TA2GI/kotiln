@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ite_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_round"
+    android:backgroundTint="#E53935"
+    android:padding="5dp"
+    android:layout_margin="5dp">
+
+    <ImageView
+        android:id="@+id/ite_pin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_pin"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+
+    <TextView
+        android:id="@+id/ite_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="작성한 노트 \n가나다라마 \nABCDEF \n123456789"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:fontFamily="@font/gothic_regular"
+        android:textStyle="bold"
+        android:maxLines="5"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="15dp"/>
+
+</LinearLayout>

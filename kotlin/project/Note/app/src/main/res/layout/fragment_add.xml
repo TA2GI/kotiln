@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.AddFragment"
+    android:background="#FF1D1D1D">
+
+    <LinearLayout
+        android:id="@+id/add_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/add_cancel"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_cancel"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add Note"
+            android:textColor="@color/color_basic"
+            android:textSize="17dp"
+            android:fontFamily="@font/gothic_bold"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/add_complete"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_complete"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/add_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="10dp"
+        android:hint="이 곳에 작성해주세요."
+        android:textColorHint="@color/color_basic"
+        android:textColor="@color/color_basic"
+        android:textSize="16dp"
+        android:fontFamily="@font/gothic_regular"
+        android:textStyle="bold"
+        android:gravity="start"
+        android:inputType="textMultiLine"
+        android:background="@null"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_top"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
