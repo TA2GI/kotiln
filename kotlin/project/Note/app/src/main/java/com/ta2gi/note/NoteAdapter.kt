@@ -1,12 +1,15 @@
 package com.ta2gi.note
 
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.ta2gi.note.room.NoteEntity
 
 class NoteAdapter(val mainActivity : MainActivity, val noteList : MutableList<NoteEntity>) : RecyclerView.Adapter<NoteAdapter.ViewHolderClass>() {
 
@@ -18,7 +21,19 @@ class NoteAdapter(val mainActivity : MainActivity, val noteList : MutableList<No
     }
 
     override fun onBindViewHolder(holder: NoteAdapter.ViewHolderClass, position: Int) {
+        // 노트 내용 넣기
         holder.note.text = noteList[position].note
+        // 노트 색상 넣기
+        holder.background.backgroundTintList = ColorStateList.valueOf(Color.parseColor(noteList[position].color))
+
+        holder.note.setOnClickListener {
+            // 클릭한 노트 정보 담고 프래그먼트 이동
+            mainActivity.noteUid = noteList[position].uid
+            mainActivity.noteText = holder.note.text.toString()
+            mainActivity.noteDate = noteList[position].date
+            mainActivity.noteColor = noteList[position].color
+            mainActivity.fragmentController("detail", true)
+        }
     }
 
     override fun getItemCount(): Int {

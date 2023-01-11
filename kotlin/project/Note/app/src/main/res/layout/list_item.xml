@@ -10,18 +10,6 @@
     android:padding="5dp"
     android:layout_margin="5dp">
 
-    <ImageView
-        android:id="@+id/ite_pin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/icon_pin"
-        android:layout_gravity="center"
-        android:visibility="gone"/>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="5dp"/>
-
     <TextView
         android:id="@+id/ite_text"
         android:layout_width="match_parent"

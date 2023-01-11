@@ -9,7 +9,7 @@
     android:background="#FF1D1D1D">
 
     <LinearLayout
-        android:id="@+id/det_top"
+        android:id="@+id/edi_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -20,55 +20,49 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/det_cancel"
+            android:id="@+id/edi_cancel"
             android:layout_width="25dp"
             android:layout_height="match_parent"
             android:src="@drawable/icon_cancel"/>
 
         <TextView
-            android:id="@+id/det_title"
+            android:id="@+id/edi_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Note"
+            android:text="Edit Note"
             android:textColor="@color/color_basic"
             android:textSize="17dp"
             android:fontFamily="@font/gothic_bold"
             android:gravity="center"/>
 
         <ImageView
-            android:id="@+id/det_delete"
+            android:id="@+id/edi_complete"
             android:layout_width="25dp"
             android:layout_height="match_parent"
-            android:src="@drawable/icon_delete"/>
-
-        <Space
-            android:layout_width="5dp"
-            android:layout_height="match_parent"/>
-
-        <ImageView
-            android:id="@+id/det_edit"
-            android:layout_width="25dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/icon_edit"/>
+            android:src="@drawable/icon_complete"/>
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/det_text"
+    <EditText
+        android:id="@+id/edi_edittext"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:paddingHorizontal="5dp"
+        android:paddingHorizontal="10dp"
         android:paddingTop="10dp"
-        android:text="작성한 노트입니다."
+        android:hint="이 곳에 작성해주세요."
+        android:textColorHint="@color/color_basic"
         android:textColor="@color/color_basic"
         android:textSize="16dp"
         android:fontFamily="@font/gothic_regular"
         android:textStyle="bold"
+        android:gravity="start"
+        android:inputType="textMultiLine"
+        android:background="@null"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/det_top"
+        app:layout_constraintTop_toBottomOf="@id/edi_top"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
