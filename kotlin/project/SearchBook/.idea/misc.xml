@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/jang/Desktop/TA2GI/kotlin/project/SearchBook/app/src/main/res/drawable/background_round.xml" value="0.156" />
         <entry key="..\:/Users/jang/Desktop/TA2GI/kotlin/project/SearchBook/app/src/main/res/layout/activity_main.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/jang/Desktop/TA2GI/kotlin/project/SearchBook/app/src/main/res/layout/fragment_home.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/jang/Desktop/TA2GI/kotlin/project/SearchBook/app/src/main/res/layout/fragment_search.xml" value="0.23802083333333332" />
       </map>
     </option>
   </component>
