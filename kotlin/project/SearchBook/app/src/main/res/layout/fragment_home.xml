@@ -5,10 +5,102 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.HomeFragment">
+    tools:context=".fragment.HomeFragment"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/fra_hom_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SearchBook"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/gothic_bold"
+            android:layout_gravity="center"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/fra_hom_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_menu"/>
+
+    </LinearLayout>
+
+    <Space
+        android:id="@+id/fra_hom_space1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fra_hom_top"/>
+
+    <LinearLayout
+        android:id="@+id/fra_hom_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:background="@drawable/background_round"
+        android:backgroundTint="#EAEAEA"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fra_hom_space1">
+
+        <EditText
+            android:id="@+id/fra_hom_search_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="책 제목을 입력하세요"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/gothic_bold"
+            android:background="@null"
+            android:padding="5dp"
+            android:inputType="text"
+            android:maxLines="1"/>
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/fra_hom_search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_search"
+            android:background="#EAEAEA"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <Space
+        android:id="@+id/fra_hom_space2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fra_hom_search_bar"/>
 
     <TextView
-        android:id="@+id/fra_home_empty_search"
+        android:id="@+id/fra_hom_empty_history"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:text="❗최근 검색한 책이 없습니다"
@@ -19,19 +111,18 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fra_hom_space2"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
     <LinearLayout
-        android:id="@+id/fra_home_recent_search"
+        android:id="@+id/fra_hom_history"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:visibility="gone"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fra_hom_space2"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <TextView
@@ -47,7 +138,7 @@
             android:layout_height="5dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/fra_home_recent_search_list"
+            android:id="@+id/fra_hom_history_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 

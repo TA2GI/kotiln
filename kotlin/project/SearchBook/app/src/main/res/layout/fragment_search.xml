@@ -5,10 +5,80 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.SearchFragment">
+    tools:context=".fragment.SearchFragment"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/fra_sea_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/fra_sea_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_back"
+            android:layout_gravity="center"/>
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@drawable/background_round"
+            android:backgroundTint="#EAEAEA"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/fra_sea_search_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="책 제목을 입력하세요"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/gothic_bold"
+                android:background="@null"
+                android:padding="5dp"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/fra_sea_search_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_search"
+                android:background="#EAEAEA"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Space
+        android:id="@+id/fra_sea_space1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fra_sea_top"/>
 
     <TextView
-        android:id="@+id/fra_home_empty_search"
+        android:id="@+id/fra_sea_empty_search_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:text="❗검색 결과가 없습니다"
@@ -16,10 +86,21 @@
         android:textColor="@color/black"
         android:fontFamily="@font/gothic_regular"
         android:gravity="center"
+        android:visibility="gone"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fra_sea_space1"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fra_sea_search_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fra_sea_space1"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

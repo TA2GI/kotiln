@@ -5,99 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:padding="5dp">
-
-    <LinearLayout
-        android:id="@+id/act_main_top"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SearchBook"
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/gothic_bold"
-            android:layout_gravity="center"/>
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-
-        <ImageView
-            android:id="@+id/act_main_menu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_menu"/>
-
-    </LinearLayout>
-
-    <Space
-        android:id="@+id/act_main_space1"
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/act_main_top"/>
-
-    <LinearLayout
-        android:id="@+id/act_main_search_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        android:background="@drawable/background_round"
-        android:backgroundTint="#EAEAEA"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/act_main_space1">
-
-        <EditText
-            android:id="@+id/act_main_search_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="책 제목을 입력하세요"
-            android:textSize="15dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/gothic_bold"
-            android:background="@null"
-            android:padding="5dp"
-            android:inputType="text"
-            android:maxLines="1"/>
-
-        <Space
-            android:layout_width="5dp"
-            android:layout_height="match_parent"/>
-
-        <ImageView
-            android:id="@+id/act_main_search_button"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/icon_search"
-            android:background="#EAEAEA"
-            android:layout_gravity="center"/>
-
-    </LinearLayout>
+    tools:context=".MainActivity">
 
     <FrameLayout
         android:id="@+id/act_main_screen"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/act_main_search_bar"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

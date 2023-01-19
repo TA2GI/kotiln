@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="@drawable/list_round"
+    android:backgroundTint="#EAEAEA">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:background="@color/black"/>
+
+    <Space
+        android:layout_width="5dp"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="책 제목"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/gothic_regular"
+            android:textStyle="bold"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="저자"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/gothic_regular"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="책 줄거리"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/gothic_regular"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="정가"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/gothic_regular"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="판매여부"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/gothic_regular"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="책 정보 자세히 보기"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/gothic_regular"/>
+
+    </LinearLayout>
+
+</LinearLayout>
