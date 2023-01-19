@@ -19,24 +19,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="SearchBook"
             android:textSize="20dp"
             android:textColor="@color/black"
             android:fontFamily="@font/gothic_bold"
             android:layout_gravity="center"/>
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-
-        <ImageView
-            android:id="@+id/fra_hom_menu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_menu"/>
 
     </LinearLayout>
 
@@ -108,6 +97,7 @@
         android:textColor="@color/black"
         android:fontFamily="@font/gothic_regular"
         android:gravity="center"
+        android:visibility="gone"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -125,13 +115,36 @@
         app:layout_constraintTop_toBottomOf="@+id/fra_hom_space2"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="▪최근 검색한 책"
-            android:textSize="17dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/gothic_bold"/>
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="▪최근 검색한 책"
+                android:textSize="17dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/gothic_bold"/>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/fra_hom_history_delete_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비우기"
+                android:textSize="13dp"
+                android:textColor="#E91E63"
+                android:fontFamily="@font/gothic_regular"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
 
         <Space
             android:layout_width="match_parent"
@@ -140,7 +153,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/fra_hom_history_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
     </LinearLayout>
 

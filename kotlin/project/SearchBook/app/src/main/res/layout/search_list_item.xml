@@ -10,8 +10,9 @@
     android:backgroundTint="#EAEAEA">
 
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="250dp"
+        android:id="@+id/search_list_item_thumbnail"
+        android:layout_width="170dp"
+        android:layout_height="245dp"
         android:background="@color/black"/>
 
     <Space
@@ -20,16 +21,17 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="250dp"
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/search_list_item_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="책 제목"
-            android:textSize="16dp"
-            android:textColor="@color/black"
             android:fontFamily="@font/gothic_regular"
+            android:text="책 제목"
+            android:textColor="@color/black"
+            android:textSize="16dp"
             android:textStyle="bold"/>
 
         <Space
@@ -37,60 +39,67 @@
             android:layout_height="5dp"/>
 
         <TextView
+            android:id="@+id/search_list_item_authors"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/gothic_regular"
             android:text="저자"
-            android:textSize="14dp"
             android:textColor="@color/black"
-            android:fontFamily="@font/gothic_regular"/>
+            android:textSize="14dp"/>
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="5dp"/>
 
         <TextView
+            android:id="@+id/search_list_item_contents"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/gothic_regular"
             android:text="책 줄거리"
+            android:textColor="@color/black"
             android:textSize="15dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/gothic_regular"/>
+            android:maxLines="7"/>
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="5dp"/>
 
         <TextView
+            android:id="@+id/search_list_item_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/gothic_regular"
             android:text="정가"
-            android:textSize="14dp"
             android:textColor="@color/black"
-            android:fontFamily="@font/gothic_regular"/>
+            android:textSize="14dp"/>
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="5dp"/>
 
         <TextView
+            android:id="@+id/search_list_item_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/gothic_regular"
             android:text="판매여부"
-            android:textSize="14dp"
             android:textColor="@color/black"
-            android:fontFamily="@font/gothic_regular"/>
+            android:textSize="14dp"/>
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="5dp"/>
 
         <TextView
+            android:id="@+id/search_list_item_url"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="책 정보 자세히 보기"
-            android:textSize="14dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/gothic_regular"/>
+            android:baselineAligned="false"
+            android:fontFamily="@font/gothic_bold"
+            android:text="🔍 책 정보 자세히 보기"
+            android:textColor="#2196F3"
+            android:textSize="14dp"/>
 
     </LinearLayout>
 
